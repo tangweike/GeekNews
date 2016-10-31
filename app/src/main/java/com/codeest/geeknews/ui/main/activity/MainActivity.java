@@ -27,6 +27,7 @@ import com.codeest.geeknews.ui.zhihu.fragment.ZhihuMainFragment;
 import com.codeest.geeknews.util.SharedPreferenceUtil;
 import com.codeest.geeknews.util.SnackbarUtil;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
+import com.networkbench.agent.impl.NBSAppAgent;
 
 import butterknife.BindView;
 import me.yokeyword.fragmentation.SupportFragment;
@@ -76,6 +77,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        NBSAppAgent.setLicenseKey("f8875fa079ef40a8a1bf0134388d416d").start(getApplicationContext());
+
         if (savedInstanceState == null) {
             SharedPreferenceUtil.setNightModeState(false);
         } else {

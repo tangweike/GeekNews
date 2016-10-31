@@ -1,8 +1,8 @@
 package com.codeest.geeknews.app;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.DisplayMetrics;
 import android.view.Display;
@@ -24,7 +24,7 @@ import java.util.Set;
 /**
  * Created by codeest on 2016/8/2.
  */
-public class App extends Application{
+public class App extends MultiDexApplication {
 
     private static App instance;
     private Set<Activity> allActivities;

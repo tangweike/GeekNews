@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 apply plugin: 'realm-android'
+apply plugin: 'newlens'
 
 android {
     compileSdkVersion 24
@@ -12,6 +13,7 @@ android {
         targetSdkVersion 24
         versionCode 2
         versionName "1.0.1"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -32,6 +34,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile files('libs/tbs_sdk_thirdapp_v2.2.0.1096_36549_sharewithdownload_withoutGame_obfs_20160830_211645.jar')
     testCompile 'junit:junit:4.12'
+    compile "com.networkbench.newlens.agent.android:nbs.newlens.agent:2.5.0"
+    compile "com.android.support:multidex:1.0.0"
 
     //ui
     compile 'com.android.support:appcompat-v7:24.1.1'

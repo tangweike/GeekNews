@@ -13,19 +13,18 @@ public class FragmentFactory {
         switch (position){
             case 1 :
 
+
                 break ;
             case 2 :
+
 
                 break;
             case 3 :
 
+
                 break;
 
         }
-
-
-
-
         return  fragment;
     }
 }
